@@ -1,0 +1,251 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-image: url('./1.jpg'); /* Replace with your image path */
+  background-size: cover; /* Ensure the image covers the entire container */
+  background-repeat: no-repeat; /* Prevent image repetition */
+  background-attachment: fixed; /* Fix the image position, so it doesn't scroll with content */
+  padding: 20px; /* Add padding to make content readable */
+  font-family: Arial, sans-serif; /* Specify a font for your app */
+}
+
+h1 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.note-list {
+  list-style: none;
+  padding-left: 5rem;
+}
+
+.delete-button {
+  background-color: #e30000;
+  color: #fff;
+  border: none;
+  padding: 7px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.delete-button:hover{
+  background-color: #660e0e;
+}
+
+.new-note-form {
+  margin-top: 20px;
+  padding-left: 5rem;
+}
+
+.input-form {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  padding-right: inherit;
+}
+
+.add-button {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 10px 9px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.add-button:hover{
+  background-color: #09580b;
+}
+
+.note-item {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.note-item:hover {
+  transform: scale(1.02);
+}
+
+.note-text {
+  font-size: 18px;
+  color: #333;
+}
+
+.edit-button {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 7px 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-left: 6px;
+}
+
+.edit-button:hover {
+  background-color: #023911;
+}
+
+.save-button {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.save-button:hover {
+  background-color: #022c04;
+}
+
+.loading{
+  text-align: center;
+}
+
+/* Notification.css */
+
+/* Style for the success notification */
+.notification-popup.success {
+  background-color: #4caf50; /* Green background for success */
+  color: #fff; /* White text color */
+  padding: 44px;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer; /* Add pointer cursor to indicate interactivity */
+  position: relative;
+  transition: transform 0.3s, opacity 0.3s; /* Animation for appearing/disappearing */
+}
+
+/* Style for the error notification */
+.notification-popup.error {
+  background-color: #d5392e; /* Red background for error */
+  color: #fff; /* White text color */
+  padding: 44px;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer; /* Add pointer cursor to indicate interactivity */
+  position: relative;
+  transition: transform 0.3s, opacity 0.3s; /* Animation for appearing/disappearing */
+}
+
+/* Style for the warning notification */
+.notification-popup.warning {
+  background-color: #a70f0f; /* Orange background for warning */
+  color: #fff; /* White text color */
+  padding: 44px;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer; /* Add pointer cursor to indicate interactivity */
+  position: relative;
+  transition: transform 0.3s, opacity 0.3s; /* Animation for appearing/disappearing */
+}
+
+.notification-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  z-index: 9999;
+  cursor: pointer; /* Add pointer cursor to indicate interactivity */
+}
+
+/* Style for the notification container */
+.notification-popup {
+  background-color: #fff; /* White background for the popup */
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  max-width: 80%; /* Adjust the maximum width as needed */
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  cursor: default; /* Prevent cursor from changing within the content */
+}
+
+
+/* Style for the close button */
+.notification-popup .close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #333; /* Dark text color */
+  cursor: pointer;
+}
+
+/* Mobile styles */
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 16px;
+  }
+  .note-item {
+    margin: 10px;
+  }
+  .new-note-form {
+    margin-top: 20px;
+    padding-left: 0rem;
+  }
+  .note-list{
+    padding-left: 0rem;
+  }
+  .notification-popup {
+    max-width: 95%; /* Further reduce maximum width for very small screens */
+    padding: 15px; /* Adjust padding for smaller screens */
+    font-size: 14px; /* Reduce font size for smaller screens */
+  }
+}
+
+/* Tablet styles */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  body {
+    font-size: 18px;
+  }
+  .note-item {
+    margin: 20px;
+  }
+}
+
+/* Desktop styles */
+@media only screen and (min-width: 1025px) {
+  body {
+    font-size: 20px;
+  }
+  .note-item {
+    margin: 30px;
+  }
+}
