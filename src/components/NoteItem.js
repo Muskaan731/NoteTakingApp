@@ -19,13 +19,13 @@ function NoteItem({ note, onDelete, onEdit }) {
             value={editedNote}
             onChange={(e) => setEditedNote(e.target.value)}
           />
-          <button className="add-button" onClick={handleSaveEdit}>Save</button>
+          <button className="add-button" onClick={handleSaveEdit}>Save button</button>
         </div>
       ) : (
         <div>
           <p>{note}</p>
-          <button className="delete-button" onClick={() => onDelete(note)}>Delete</button>
-          <button className="edit-button" onClick={() => setIsEditing(true)}>Edit</button>
+          <button className="delete-button" onClick={() => onDelete(note)}>Delete button</button>
+          <button className="edit-button" onClick={() => setIsEditing(true)}>Edit button</button>
         </div>
       )}
     </div>
