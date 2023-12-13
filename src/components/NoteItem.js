@@ -24,8 +24,8 @@ function NoteItem({ note, onDelete, onEdit }) {
       ) : (
         <div>
           <p>{note}</p>
-          <button className="delete-button" onClick={() => onDelete(note)}>Delete button</button>
-          <button className="edit-button" onClick={() => setIsEditing(true)}>Edit button</button>
+          <button className="delete-button" onClick={() => onDelete(note)}>Delete Button</button>
+          <button className="edit-button" onClick={() => setIsEditing(true)}>Edit Button</button>
         </div>
       )}
     </div>
